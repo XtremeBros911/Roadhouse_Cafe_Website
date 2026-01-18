@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Meta Tags -->
+    <title>Roadhouse Cafe GK1 | Best Italian & Continental Cafe in M Block Market</title>
+    <meta name="description" content="Visit Roadhouse Cafe in GK1 M Block Market. Rated 4.4/5 for our Wood-fired Pizzas, Pastas, and Asian cuisine. The perfect spot for dining in New Delhi. Reserve a table now.">
+    <meta name="keywords" content="Roadhouse Cafe GK1, Cafe in M Block Market, Italian food GK1, Best Pizza South Delhi, Continental restaurant New Delhi, Place for dinner GK1">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Roadhouse Cafe - GK1's Favorite Italian Spot">
+    <meta property="og:description" content="Rated 4.4 Stars. Serving the best Pizzas, Burgers, and Asian cuisine in M Block Market, New Delhi.">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/XtremeBros911/Host_Image@main/Ambiance.png">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- LINK TO COMPILED CSS -->
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-opacity-95 bg-darker border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold tracking-wider text-gold">ROADHOUSE<span class="text-white">CAFE</span></a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-sm uppercase tracking-widest hover:text-gold transition">Home</a>
+                <a href="#about" class="text-sm uppercase tracking-widest hover:text-gold transition">About</a>
+                <a href="#menu" class="text-sm uppercase tracking-widest hover:text-gold transition">Menu</a>
+                <a href="#gallery" class="text-sm uppercase tracking-widest hover:text-gold transition">Gallery</a>
+                <a href="#contact" class="text-sm uppercase tracking-widest hover:text-gold transition">Contact</a>
+            </div>
+
+            <!-- Mobile Button -->
+            <button id="mobile-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-black bg-opacity-95 flex flex-col justify-center items-center space-y-8 md:hidden">
+        <button id="close-menu" class="absolute top-6 right-6 text-3xl text-gold">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="text-2xl font-serif hover:text-gold mobile-link">Home</a>
+        <a href="#about" class="text-2xl font-serif hover:text-gold mobile-link">About</a>
+        <a href="#menu" class="text-2xl font-serif hover:text-gold mobile-link">Menu</a>
+        <a href="#gallery" class="text-2xl font-serif hover:text-gold mobile-link">Gallery</a>
+        <a href="#contact" class="text-2xl font-serif hover:text-gold mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl animate-fade-in-up">
+            <p class="text-gold tracking-[0.2em] uppercase text-sm mb-4 font-bold">Greater Kailash 1, New Delhi</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Flavor Meets <br><span class="text-gold italic">Eclectic Vibes</span></h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                Continental, Italian, Asian, and the best artisanal burgers in town. Experience dining reimagined on our breezy terrace.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button onclick="openMenuModal('food')" class="btn-gold px-8 py-3 font-bold uppercase tracking-wider text-sm rounded">View Full Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Single Image Layout for Ambiance -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-gold to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/800x600/121212/D4AF37?text=Ambiance'" alt="Roadhouse Ambiance" class="relative w-full rounded-sm shadow-2xl object-cover">
+                </div>
+
+                <div class="md:pl-10">
+                    <h4 class="text-gold uppercase tracking-widest text-sm font-bold mb-2">Welcome to Roadhouse</h4>
+                    <h2 class="text-4xl md:text-5xl mb-6">Experience Dining <br>With Heart</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        At Roadhouse Cafe, we are passionate about creating a dining experience that goes beyond simply satisfying your hunger. We invite you to visit our restaurant in GK 1, where we have been serving our valued guests with excellence and dedication.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        With every dish we prepare, we aim to bring people together, celebrate flavors from around the world, and create moments that linger long after the meal ends. Our commitment to quality, innovation, and heartfelt service ensures that every visit to Roadhouse Cafe feels special, comforting, and memorable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="py-20 bg-dark border-t border-gray-900 relative">
+        <!-- Background decorative element -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gold rounded-full filter blur-[100px] opacity-5 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold uppercase tracking-widest text-xs font-bold mb-2 block">Word on the Street</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Loved by Locals</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Don't just take our word for it. Here is what our guests have to say about their Roadhouse experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-darker p-8 rounded-xl border border-gray-800 hover:border-gold transition duration-300 group flex flex-col h-full">
+                    <div class="flex items-center gap-1 mb-4 text-gold text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 flex-grow leading-relaxed">"I recently visited Roadhouse Cafe and Bar, and the breakfast was incredible! The entire menu is very tasty and feels truly special, but the pancakes really stood out—they were soft, fluffy, and full of flavor. Easily one of the best breakfast experiences I've had in a long time."</p>
+                    <div class="flex items-center gap-4 mt-auto pt-6 border-t border-gray-800">
+                        <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gold font-bold">A</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Amit J.</h5>
+                            <span class="text-xs text-gray-500">Verified Diner</span>
+                        </div>
+                        <i class="fas fa-quote-right ml-auto text-2xl text-gray-800 group-hover:text-gold transition"></i>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-darker p-8 rounded-xl border border-gray-800 hover:border-gold transition duration-300 group flex flex-col h-full">
+                    <div class="flex items-center gap-1 mb-4 text-gold text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 flex-grow leading-relaxed">"I recently had dinner at Roadhouse Cafe and was blown away by their fusion French fries. The combination of French and Asian flavors was a unique and delicious experience. The dish was perfectly seasoned. The ambiance of the restaurant was also top-notch."</p>
+                    <div class="flex items-center gap-4 mt-auto pt-6 border-t border-gray-800">
+                        <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gold font-bold">K</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Kartik Bhardwaj</h5>
+                            <span class="text-xs text-gray-500">Verified Diner</span>
+                        </div>
+                        <i class="fas fa-quote-right ml-auto text-2xl text-gray-800 group-hover:text-gold transition"></i>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-darker p-8 rounded-xl border border-gray-800 hover:border-gold transition duration-300 group flex flex-col h-full">
+                    <div class="flex items-center gap-1 mb-4 text-gold text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 flex-grow leading-relaxed">"Overall, I loved the experience. Pasta and momos were super tasty. Portion size was good too. Decent ambiance, spacious enough. Service was prompt, the attendant was courteous. According to me, this is a value for money place."</p>
+                    <div class="flex items-center gap-4 mt-auto pt-6 border-t border-gray-800">
+                        <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gold font-bold">R</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Rohit G.</h5>
+                            <span class="text-xs text-gray-500">Verified Diner</span>
+                        </div>
+                        <i class="fas fa-quote-right ml-auto text-2xl text-gray-800 group-hover:text-gold transition"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Badge / Link -->
+            <div class="mt-12 text-center">
+                <p class="text-gray-500 text-sm mb-4">We value transparency. Read all our authentic reviews on Zomato.</p>
+                <a href="https://www.zomato.com/ncr/roadhouse-cafe-greater-kailash-gk-1-new-delhi/reviews" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3 border border-gray-600 rounded hover:border-red-500 hover:text-red-500 transition-colors duration-300 text-gray-300">
+                    <span class="font-bold">Check Reviews on Zomato</span>
+                    <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW MENU SECTION (Tabs) -->
+    <section id="menu" class="py-24 bg-dark">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="flex flex-col items-center gap-4 text-center mb-12">
+                <span class="border border-gray-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-gold bg-darker">Roadhouse Menu</span>
+                <h1 class="max-w-2xl text-3xl font-serif font-semibold md:text-5xl">Curated Collections</h1>
+                <p class="text-gray-400 max-w-lg">We take pride in inclusivity. Explore our extensive Standard, Vegan, and Gluten-Free selections.</p>
+            </div>
+
+            <!-- Tab Triggers -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
+                <button onclick="openTab(event, 'tab-food')" id="defaultOpen" class="tab-btn flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all hover:bg-grey hover:text-white w-full sm:w-auto justify-center">
+                    <i class="fas fa-utensils"></i> All Day Dining
+                </button>
+                <button onclick="openTab(event, 'tab-bar')" class="tab-btn flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all hover:bg-grey hover:text-white w-full sm:w-auto justify-center">
+                    <i class="fas fa-wine-glass"></i> Bar
+                </button>
+            </div>
+
+            <!-- Tab Content: Food -->
+            <div id="tab-food" class="tab-content hidden animate-fade-in">
+                <div class="bg-darker rounded-2xl p-6 lg:p-12 border border-gray-800">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col gap-6">
+                            <span class="w-fit border border-gold text-gold px-2 py-1 text-xs rounded uppercase tracking-wider">Something for Everyone</span>
+                            <h3 class="text-3xl font-serif lg:text-5xl leading-tight">Vegan, Gluten-Free <br>& Classic Favorites</h3>
+                            <p class="text-gray-400 text-lg leading-relaxed">
+                                Our menu is designed with dietary preferences in mind. From <strong>Vegan Burnt Garlic Fried Rice</strong> to <strong>Gluten-Free Mountain Chili Bowls</strong> and our classic <strong>Thin Crust Pizzas</strong>.
+                            </p>
+                            
+                            <!-- Badges -->
+                            <div class="flex gap-4 mb-4">
+                                <span class="flex items-center text-sm text-vegan"><i class="fas fa-leaf mr-2"></i> Vegan Options</span>
+                                <span class="flex items-center text-sm text-gf"><i class="fas fa-wheat-awn-circle-exclamation mr-2"></i> Gluten-Free Options</span>
+                            </div>
+
+                            <button onclick="openMenuModal('food')" class="mt-2 btn-gold px-8 py-3 w-fit font-bold uppercase tracking-wider text-sm rounded">View Full Food Menu</button>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000&auto=format&fit=crop" onerror="this.src='https://placehold.co/800x600/121212/D4AF37?text=Food+Menu'" alt="Food Menu" class="rounded-xl shadow-2xl border border-gray-800">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Bar -->
+            <div id="tab-bar" class="tab-content hidden animate-fade-in">
+                <div class="bg-darker rounded-2xl p-6 lg:p-12 border border-gray-800">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col gap-6">
+                            <span class="w-fit border border-gold text-gold px-2 py-1 text-xs rounded uppercase tracking-wider">Liquid Luxuries</span>
+                            <h3 class="text-3xl font-serif lg:text-5xl leading-tight">Spirited Elixirs, <br>Shakes & Teas</h3>
+                            <p class="text-gray-400 text-lg leading-relaxed">
+                                From our signature <strong>Cinnamon Sangria</strong> to refreshing <strong>Granitas</strong> and thick <strong>Milkshakes</strong>. We have the perfect pour for every mood.
+                            </p>
+                            <ul class="space-y-3 text-gray-400">
+                                <li><i class="fas fa-check text-gold mr-2"></i> Signature Mocktails</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i> Classic Cocktails</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i> Thick Shakes & Smoothies</li>
+                            </ul>
+                            <button onclick="openMenuModal('bar')" class="mt-4 btn-gold px-8 py-3 w-fit font-bold uppercase tracking-wider text-sm rounded">View Drinks Menu</button>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1000&auto=format&fit=crop" onerror="this.src='https://placehold.co/800x600/121212/D4AF37?text=Bar+Drinks'" alt="Bar Menu" class="rounded-xl shadow-2xl border border-gray-800">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FULL MENU MODAL OVERLAY -->
+    <div id="menu-modal" class="fixed inset-0 z-[100] bg-black/95 overflow-y-auto backdrop-blur-sm">
+        <div class="min-h-screen px-4 py-12 md:py-20 container mx-auto max-w-4xl relative">
+            
+            <!-- Close Button -->
+            <button onclick="closeFullMenu()" class="fixed top-6 right-6 text-gray-400 hover:text-white text-4xl z-50">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="text-center mb-10">
+                <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Our Collections</h2>
+                
+                <!-- Modal Switcher -->
+                <div class="flex justify-center gap-4">
+                    <button onclick="switchModalTab('food')" id="modal-tab-food" class="modal-tab-btn active">Food Menu</button>
+                    <button onclick="switchModalTab('bar')" id="modal-tab-bar" class="modal-tab-btn">Drinks & Bar</button>
+                </div>
+            </div>
+
+            <!-- ================= FOOD MENU CONTENT ================= -->
+            <div id="modal-content-food">
+                 <!-- Legend -->
+                 <div class="flex justify-center gap-6 text-sm mb-8">
+                    <span class="text-white"><i class="fas fa-utensils"></i> Standard</span>
+                    <span class="text-vegan"><i class="fas fa-leaf"></i> Vegan</span>
+                    <span class="text-gf"><i class="fas fa-wheat-awn-circle-exclamation"></i> Gluten Free</span>
+                </div>
+
+                <!-- 1. STANDARD MENU (MOVED TO TOP) -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-serif text-white mb-4 border-b border-white/30 pb-2"><i class="fas fa-utensils mr-2"></i> Standard Menu</h3>
+                    
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Appetizers & Pan Asian Starters</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Peanut Sandheko</span> <span class="text-gold">₹315</span></div>
+                            <div class="menu-item-row"><span>Stir Fry Asian Greens</span> <span class="text-gold">₹375</span></div>
+                            <div class="menu-item-row"><span>Spring Rolls (5 pcs)</span> <span class="text-gold">₹375</span></div>
+                            <div class="menu-item-row"><span>Thai Basil Chicken</span> <span class="text-gold">₹445</span></div>
+                            <div class="menu-item-row"><span>Black Pepper Chicken</span> <span class="text-gold">₹445</span></div>
+                            <div class="menu-item-row"><span>Sriracha Chicken Wings (6 pcs)</span> <span class="text-gold">₹475</span></div>
+                            <div class="menu-item-row"><span>Kung Pao Chicken Dry</span> <span class="text-gold">₹445</span></div>
+                            <div class="menu-item-row"><span>Boneless Chili Chicken Dry</span> <span class="text-gold">₹445</span></div>
+                            <div class="menu-item-row"><span>Salt and Pepper Fish</span> <span class="text-gold">₹545</span></div>
+                            <div class="menu-item-row"><span>Pepper Prawns</span> <span class="text-gold">₹695</span></div>
+                            <div class="menu-item-row"><span>Darjeeling Veg Momo Steamed (6pcs)</span> <span class="text-gold">₹295</span></div>
+                            <div class="menu-item-row"><span>Darjeeling Veg Momo Sandheko (6pcs)</span> <span class="text-gold">₹345</span></div>
+                            <div class="menu-item-row"><span>Darjeeling Chicken Momo Steamed (6pcs)</span> <span class="text-gold">₹425</span></div>
+                            <div class="menu-item-row"><span>Darjeeling Chicken Momo Sandheko (6pcs)</span> <span class="text-gold">₹475</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Salads (Standard)</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Caesar Salad</span> <span class="text-gold">₹375</span></div>
+                            <div class="menu-item-row"><span>Couscous Salad</span> <span class="text-gold">₹375</span></div>
+                            <div class="menu-item-row"><span>Greek Salad</span> <span class="text-gold">₹375</span></div>
+                            <div class="menu-item-row"><span>Fattoush Salad</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>Smoked Chicken Sandheko</span> <span class="text-gold">₹415</span></div>
+                            <div class="menu-item-row text-sm italic text-gray-500"><span>+ Add-ons: Grilled Chicken ₹90 | Bacon ₹230 | Garlic Prawns ₹230</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Thin Crust Pizzas (9" / 12")</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Margherita</span> <span class="text-gold">₹395 / ₹515</span></div>
+                            <div class="menu-item-row"><span>Ortolana Pizza</span> <span class="text-gold">₹495 / ₹615</span></div>
+                            <div class="menu-item-row"><span>Smoked Chicken Sandheko Pizza</span> <span class="text-gold">₹595 / ₹795</span></div>
+                            <div class="menu-item-row"><span>Vegetarian Peri Peri Pizza</span> <span class="text-gold">₹495 / ₹615</span></div>
+                            <div class="menu-item-row"><span>Peri Peri Chicken (Chef Rec)</span> <span class="text-gold">₹625 / ₹825</span></div>
+                            <div class="menu-item-row"><span>Roadhouse Greens</span> <span class="text-gold">₹545 / ₹665</span></div>
+                            <div class="menu-item-row"><span>Al Fungi (Truffle Oil)</span> <span class="text-gold">₹495 / ₹615</span></div>
+                            <div class="menu-item-row"><span>Jardinier</span> <span class="text-gold">₹495 / ₹615</span></div>
+                            <div class="menu-item-row"><span>Four Cheese</span> <span class="text-gold">₹595 / ₹795</span></div>
+                            <div class="menu-item-row"><span>The Greek Pizza</span> <span class="text-gold">₹545 / ₹665</span></div>
+                            <div class="menu-item-row"><span>Carbonara Pizza</span> <span class="text-gold">₹545 / ₹665</span></div>
+                            <div class="menu-item-row"><span>BBQ Chicken Pizza</span> <span class="text-gold">₹595 / ₹795</span></div>
+                            <div class="menu-item-row"><span>Lamb Meatball Pizza</span> <span class="text-gold">₹625 / ₹825</span></div>
+                            <div class="menu-item-row"><span>Chicken Chorizo Diavola</span> <span class="text-gold">₹595 / ₹795</span></div>
+                            <div class="menu-item-row"><span>Pork Pepperoni</span> <span class="text-gold">₹645 / ₹845</span></div>
+                            <div class="menu-item-row"><span>Four Chicken Pizza (Signature)</span> <span class="text-gold">₹595 / ₹795</span></div>
+                            <div class="menu-item-row"><span>Bacon Carbonara Pizza</span> <span class="text-gold">₹725 / ₹925</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Continental Mains & Pastas</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Roadhouse Lasagna Alle Verdure</span> <span class="text-gold">₹645</span></div>
+                            <div class="menu-item-row"><span>Roadhouse Chicken Lasagna</span> <span class="text-gold">₹795</span></div>
+                            <div class="menu-item-row"><span>Lebanese Chicken</span> <span class="text-gold">₹695</span></div>
+                            <div class="menu-item-row"><span>Roadhouse Special Pasta (Signature)</span> <span class="text-gold">₹395 / ₹695</span></div>
+                            <div class="menu-item-row"><span>Aglio Olio e Peperoncino</span> <span class="text-gold">₹315 / ₹565</span></div>
+                            <div class="menu-item-row"><span>Pasta Alfredo</span> <span class="text-gold">₹315 / ₹565</span></div>
+                            <div class="menu-item-row"><span>Alla Arrabbiata</span> <span class="text-gold">₹315 / ₹565</span></div>
+                            <div class="menu-item-row"><span>With Lamb Meatballs</span> <span class="text-gold">₹425 / ₹795</span></div>
+                            <div class="menu-item-row"><span>Alla Puttanesca</span> <span class="text-gold">₹345 / ₹595</span></div>
+                            <div class="menu-item-row"><span>Alla Carbonara (Contains Egg)</span> <span class="text-gold">₹425 / ₹795</span></div>
+                            <div class="menu-item-row"><span>Alla Genovese</span> <span class="text-gold">₹315 / ₹565</span></div>
+                            <div class="menu-item-row"><span>Al Pomodoro</span> <span class="text-gold">₹315 / ₹565</span></div>
+                            <div class="menu-item-row"><span>Vegetariane</span> <span class="text-gold">₹345 / ₹595</span></div>
+                            <div class="menu-item-row"><span>Gnocchi Pommorosso</span> <span class="text-gold">₹515</span></div>
+                            <div class="menu-item-row text-sm italic text-gray-500"><span>+ Add Grilled Chicken (100g)</span> <span class="text-gold">+₹90</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Pan Asian Mains, Bowls & Rice</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Veg Mountain Chili Curry/Bowl</span> <span class="text-gold">₹495</span></div>
+                            <div class="menu-item-row"><span>Veg Brown Garlic Peking Curry/Bowl</span> <span class="text-gold">₹495</span></div>
+                            <div class="menu-item-row"><span>Veg Massaman Curry/Bowl</span> <span class="text-gold">₹495</span></div>
+                            <div class="menu-item-row"><span>Veg Thai Green/Red Curry/Bowl</span> <span class="text-gold">₹495</span></div>
+                            <div class="menu-item-row text-sm italic text-gray-500"><span>+ Add Chicken ₹150 | + Add Prawn ₹280</span></div>
+                            <div class="menu-item-row"><span>Burnt Garlic Fried Rice</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>Vegetable Fried Rice</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>Veg Chow Mein (Whole Wheat Soba)</span> <span class="text-gold">₹395</span></div>
+                            <div class="menu-item-row"><span>Vegetarian Pad Thai</span> <span class="text-gold">₹395</span></div>
+                            <div class="menu-item-row"><span>Chicken Fried Rice</span> <span class="text-gold">₹425</span></div>
+                            <div class="menu-item-row"><span>Chicken Chow Mein (Whole Wheat Soba)</span> <span class="text-gold">₹425</span></div>
+                            <div class="menu-item-row"><span>Chicken Pad Thai</span> <span class="text-gold">₹445</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Sandwiches & Paninis</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Caprese Sandwich</span> <span class="text-gold">₹575</span></div>
+                            <div class="menu-item-row"><span>Falafel Sandwich</span> <span class="text-gold">₹525</span></div>
+                            <div class="menu-item-row"><span>Indianised Ortolana Veg Sandwich</span> <span class="text-gold">₹525</span></div>
+                            <div class="menu-item-row"><span>Indianised Peri Peri Chicken Sandwich</span> <span class="text-gold">₹625</span></div>
+                            <div class="menu-item-row"><span>Pulled Chicken Sandwich</span> <span class="text-gold">₹625</span></div>
+                            <div class="menu-item-row"><span>Lamb Meatball Sandwich</span> <span class="text-gold">₹675</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Standard Desserts</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Fudgy Chocolate Walnut Brownie</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>Old-Fashioned Carrot Cake (Date Syrup)</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>Old-Fashioned Carrot Cake w/ Fig Walnut Ice Cream</span> <span class="text-gold">₹415</span></div>
+                            <div class="menu-item-row"><span>Chocolate Duomo w/ Tiramisu Ice Cream</span> <span class="text-gold">₹415</span></div>
+                            <div class="menu-item-row"><span>Sizzling Brownie & Ice Cream</span> <span class="text-gold">₹415</span></div>
+                            <div class="menu-item-row"><span>London Dairy Ice Cream Scoop</span> <span class="text-gold">₹195</span></div>
+                            <div class="menu-item-row text-sm italic text-gray-500"><span>Flavors: Tiramisu, Double Choc, Vanilla, Coconutello, Fig & Walnut</span></div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 2. VEGAN SECTION -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-serif text-vegan mb-4 border-b border-vegan/30 pb-2"><i class="fas fa-leaf mr-2"></i> Vegan Collection</h3>
+                    
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Vegan Rice, Noodles & Bowls</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Vegan Burnt Garlic Fried Rice</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>Vegan Fried Rice</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>Vegan Chow Mein (Whole Wheat Soba)</span> <span class="text-gold">₹395</span></div>
+                            <div class="menu-item-row"><span>Vegan Pad Thai</span> <span class="text-gold">₹395</span></div>
+                            <div class="menu-item-row"><span>Vegan Mountain Chili Bowl/Curry</span> <span class="text-gold">₹495</span></div>
+                            <div class="menu-item-row"><span>Vegan Massaman Curry Bowl/Curry</span> <span class="text-gold">₹495</span></div>
+                            <div class="menu-item-row"><span>Vegan Thai Green/Red Curry Bowl</span> <span class="text-gold">₹495</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Vegan Appetizers</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Vegan Chipotle Chili Hummus</span> <span class="text-gold">₹395</span></div>
+                            <div class="menu-item-row"><span>Vegan Garlic Bread Plain</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row text-sm italic text-gray-500"><span>+ Add Vegan Mozzarella Cheese</span> <span class="text-gold">+₹155</span></div>
+                            <div class="menu-item-row"><span>Vegan Spring Rolls</span> <span class="text-gold">₹375</span></div>
+                            <div class="menu-item-row"><span>Vegan Peanut Sandheko</span> <span class="text-gold">₹315</span></div>
+                            <div class="menu-item-row"><span>Darjeeling Veg Momo Steamed (6pcs)</span> <span class="text-gold">₹295</span></div>
+                            <div class="menu-item-row"><span>Darjeeling Veg Momo Sandheko (6pcs)</span> <span class="text-gold">₹315</span></div>
+                            <div class="menu-item-row text-sm italic text-gray-500"><span>+ Pot Sticker Option (Crispy Bottom)</span> <span class="text-gold">+₹25</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>Vegan Desserts</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Vegan Old-Fashioned Carrot Cake (Date Syrup)</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>Vegan Dark Chocolate Coconut Cream Pie</span> <span class="text-gold">₹455</span></div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 3. GLUTEN FREE SECTION -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-serif text-gf mb-4 border-b border-gf/30 pb-2"><i class="fas fa-wheat-awn-circle-exclamation mr-2"></i> Gluten-Free Collection</h3>
+                    
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>GF Pan Asian Bowls & Rice</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>GF Mountain Chili Bowl</span> <span class="text-gold">₹495</span></div>
+                            <div class="menu-item-row"><span>GF Prawn Mountain Chili Bowl</span> <span class="text-gold">₹775</span></div>
+                            <div class="menu-item-row"><span>GF Brown Garlic Peking Bowl</span> <span class="text-gold">₹495</span></div>
+                            <div class="menu-item-row"><span>GF Prawn Brown Garlic Peking Bowl</span> <span class="text-gold">₹775</span></div>
+                            <div class="menu-item-row"><span>GF Burnt Garlic Fried Rice</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>GF Vegetable Fried Rice</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>GF Chicken Fried Rice</span> <span class="text-gold">₹425</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>GF Small Bites & Salads</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Peperoncino Prawns (8 pcs)</span> <span class="text-gold">₹695</span></div>
+                            <div class="menu-item-row"><span>GF Peanut Sandheko</span> <span class="text-gold">₹315</span></div>
+                            <div class="menu-item-row"><span>GF Caesar Salad</span> <span class="text-gold">₹375</span></div>
+                            <div class="menu-item-row"><span>GF Greek Salad</span> <span class="text-gold">₹375</span></div>
+                            <div class="menu-item-row"><span>GF Fattoush Salad</span> <span class="text-gold">₹325</span></div>
+                            <div class="menu-item-row"><span>GF Smoked Chicken Sandheko</span> <span class="text-gold">₹415</span></div>
+                        </div>
+                    </details>
+
+                    <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                        <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                            <span>GF Desserts</span>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </summary>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="menu-item-row"><span>Dark Chocolate Coconut Cream Pie</span> <span class="text-gold">₹455</span></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- ================= BAR MENU CONTENT ================= -->
+            <div id="modal-content-bar" class="hidden">
+                 <!-- Bar menu items -->
+                 <div class="flex justify-center gap-6 text-sm mb-8 text-gray-400">
+                    <span><i class="fas fa-leaf text-gold"></i> Non-Alcoholic</span>
+                    <span><i class="fas fa-glass-martini-alt text-gold"></i> Cocktails</span>
+                    <span><i class="fas fa-beer text-gold"></i> Beers</span>
+                    <span><i class="fas fa-wine-bottle text-gold"></i> Wines</span>
+                </div>
+                
+                <!-- 1. NON-ALCOHOLIC SECTION (Moved to Top) -->
+                <h3 class="text-2xl font-serif text-white mb-4 border-b border-white/30 pb-2"><i class="fas fa-leaf mr-2"></i> Non-Alcoholic</h3>
+
+                <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg text-white">
+                        <span>Coolers, Mocktails & Granitas</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-2">Granitas</div>
+                        <div class="menu-item-row"><span>Crazy Gum / Kiwi Cucumber / Spiced Yuzu</span> <span class="text-gold">₹295</span></div>
+
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-6">Spritzers</div>
+                        <div class="menu-item-row"><span>Blueberry Elderflower / Mango Passion</span> <span class="text-gold">₹295</span></div>
+                        <div class="menu-item-row"><span>Raspberry Hazelnut / Cherry Elderflower</span> <span class="text-gold">₹295</span></div>
+
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-6">Signature & Mocktails</div>
+                        <div class="menu-item-row"><span>Cinnamon Sangria (Signature)</span> <span class="text-gold">₹245</span></div>
+                        <div class="menu-item-row"><span>Cinnamon Sangria (Pitcher)</span> <span class="text-gold">₹980</span></div>
+                        <div class="menu-item-row"><span>Berries Elderflower Mocktail</span> <span class="text-gold">₹295</span></div>
+                        <div class="menu-item-row"><span>Virgin Mary</span> <span class="text-gold">₹195</span></div>
+
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-6">Ice Teas & Mojitos</div>
+                        <div class="menu-item-row"><span>Lemon Ice Tea</span> <span class="text-gold">₹175</span></div>
+                        <div class="menu-item-row"><span>Flavored Ice Tea</span> <span class="text-gold">₹245</span></div>
+                        <div class="menu-item-row"><span>Flavored Ice Tea (Pitcher)</span> <span class="text-gold">₹980</span></div>
+                        <div class="menu-item-row"><span>Virgin Mint Mojito</span> <span class="text-gold">₹245</span></div>
+                        <div class="menu-item-row"><span>Virgin Mint Mojito (Pitcher)</span> <span class="text-gold">₹1180</span></div>
+                    </div>
+                </details>
+
+                <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                        <span>Shakes, Smoothies & Juices</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-2">Milk Shakes</div>
+                        <div class="menu-item-row"><span>Strawberry / Chocolate / Cherry / Blueberry</span> <span class="text-gold">₹295</span></div>
+                        <div class="menu-item-row"><span>Watermelon Shake</span> <span class="text-gold">₹295</span></div>
+                        <div class="menu-item-row"><span>Peanut Butter / Oreo Cookie Shake</span> <span class="text-gold">₹315</span></div>
+                        <div class="menu-item-row"><span>Nutella / KitKat Shake</span> <span class="text-gold">₹375</span></div>
+
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-6">Fresh Fruit Juices</div>
+                        <div class="menu-item-row"><span>Green Delight / Power Fruits / Minty / Immunity / Beet</span> <span class="text-gold">₹295</span></div>
+                        <div class="menu-item-row"><span>Sweet Lime / Watermelon / Pineapple</span> <span class="text-gold">₹225</span></div>
+
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-6">Smoothies</div>
+                        <div class="menu-item-row"><span>Appleberry / Berry Good / Hawaiian / Blue Banana</span> <span class="text-gold">₹315</span></div>
+                    </div>
+                </details>
+
+                 <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                        <span>Hot Teas & Beverages</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="menu-item-row"><span>Organic Hot Teas</span> <span class="text-gold">₹195</span></div>
+                        <div class="text-sm italic text-gray-500 mb-4">Blueberry, Jasmine, Chamomile, Darjeeling, English Breakfast, Matcha Green, Peppermint, Mango, Masala, Earl Grey</div>
+                        
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-2">Nitty - Gritties</div>
+                        <div class="menu-item-row"><span>Mineral Water</span> <span class="text-gold">₹110</span></div>
+                        <div class="menu-item-row"><span>San Benedetto Sparkling Water</span> <span class="text-gold">₹145</span></div>
+                        <div class="menu-item-row"><span>Perrier French Sparkling Water</span> <span class="text-gold">₹315</span></div>
+                        <div class="menu-item-row"><span>Fresh Lime Water / Soda</span> <span class="text-gold">₹175</span></div>
+                        <div class="menu-item-row"><span>Aerated Beverages</span> <span class="text-gold">₹145</span></div>
+                        <div class="menu-item-row"><span>Schweppes Ginger Ale / Tonic</span> <span class="text-gold">₹185</span></div>
+                        <div class="menu-item-row"><span>Red Bull</span> <span class="text-gold">₹225</span></div>
+                        <div class="menu-item-row"><span>Canned Juices</span> <span class="text-gold">₹135</span></div>
+                    </div>
+                </details>
+
+                <!-- 2. ALCOHOLIC SECTION (Added Header) -->
+                <h3 class="text-2xl font-serif text-white mb-4 mt-8 border-b border-white/30 pb-2"><i class="fas fa-wine-glass-alt mr-2"></i> Bar</h3>
+                
+                <!-- 1. SPIRITED TEAS (COCKTAILS) -->
+                <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                        <span>Spirited Teas (Cocktails)</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="menu-item-row"><span>Italian Tea</span> <span class="text-gold">₹525</span></div>
+                        <div class="menu-item-row"><span>Long Island Iced Tea</span> <span class="text-gold">₹575</span></div>
+                        <div class="menu-item-row"><span>Long Beach Iced Tea</span> <span class="text-gold">₹545</span></div>
+                        <div class="menu-item-row"><span>Electric Iced Tea</span> <span class="text-gold">₹575</span></div>
+                    </div>
+                </details>
+
+                <!-- 2. BEERS -->
+                <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                        <span>Beers & Alcopops</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="menu-item-row"><span>Corona Extra</span> <span class="text-gold">₹445</span></div>
+                        <div class="menu-item-row"><span>Hoegaarden</span> <span class="text-gold">₹445</span></div>
+                        <div class="menu-item-row"><span>Heineken</span> <span class="text-gold">₹325</span></div>
+                        <div class="menu-item-row"><span>Kingfisher Ultra</span> <span class="text-gold">₹295</span></div>
+                        <div class="menu-item-row"><span>Kingfisher Premier</span> <span class="text-gold">₹275</span></div>
+                        <div class="menu-item-row"><span>Bira 91 White</span> <span class="text-gold">₹345</span></div>
+                        <div class="menu-item-row"><span>Bira 91 Blonde</span> <span class="text-gold">₹325</span></div>
+                        <div class="menu-item-row"><span>Erdinger Dunkel</span> <span class="text-gold">₹445</span></div>
+                        <div class="menu-item-row"><span>Erdinger Weissbier</span> <span class="text-gold">₹445</span></div>
+                        <div class="menu-item-row"><span>Proost</span> <span class="text-gold">₹445</span></div>
+                        <div class="menu-item-row"><span>Bacardi Breezer</span> <span class="text-gold">₹275</span></div>
+                    </div>
+                </details>
+
+                <!-- 3. WINES -->
+                <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                        <span>Wines (Glass / Bottle)</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="menu-item-row"><span>Rojo Vivo Tempranillo (House)</span> <span class="text-gold">₹475</span></div>
+                        <div class="menu-item-row"><span>Baron Philippe Cadet D'oc (Pinot Noir)</span> <span class="text-gold">₹595</span></div>
+                        <div class="menu-item-row"><span>Baron Philippe Cadet D'oc (Merlot)</span> <span class="text-gold">₹595</span></div>
+                        <div class="menu-item-row"><span>Miguel Torres San Medin</span> <span class="text-gold">₹725</span></div>
+                        <div class="menu-item-row"><span>Baron Philippe Cadet D'oc (Cabernet)</span> <span class="text-gold">₹595</span></div>
+                        <div class="menu-item-row"><span>The Accomplice</span> <span class="text-gold">₹595</span></div>
+                        <div class="menu-item-row"><span>Fratelli Classic Shiraz</span> <span class="text-gold">₹395</span></div>
+                        <div class="menu-item-row"><span>Villa Fassini Toscana</span> <span class="text-gold">₹595</span></div>
+                        <div class="border-t border-gray-700 mt-4 pt-4 text-sm text-gray-500 font-bold uppercase">Bottles Only</div>
+                        <div class="menu-item-row"><span>Black Tower Dorndelder</span> <span class="text-gold">₹3950</span></div>
+                        <div class="menu-item-row"><span>Rawsons</span> <span class="text-gold">₹3100</span></div>
+                        <div class="menu-item-row"><span>Two Vines Columbia Valley (Cabernet)</span> <span class="text-gold">₹3950</span></div>
+                        <div class="menu-item-row"><span>Two Vines Columbia Valley (Shiraz)</span> <span class="text-gold">₹3950</span></div>
+                        <div class="menu-item-row"><span>Clasicode Legarde Malbec-Merlot</span> <span class="text-gold">₹3950</span></div>
+                        <div class="menu-item-row"><span>Umani Ronchi Montepulciano</span> <span class="text-gold">₹2950</span></div>
+                        <div class="menu-item-row"><span>Piccini Chianti Reserva</span> <span class="text-gold">₹4350</span></div>
+                    </div>
+                </details>
+
+                <!-- 4. SCOTCH & WHISKEY -->
+                <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                        <span>Scotch, Whiskies & Bourbon (30ml)</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="menu-item-row"><span>Glenfiddich 12yr</span> <span class="text-gold">₹665</span></div>
+                        <div class="menu-item-row"><span>Glenlivet 12yr</span> <span class="text-gold">₹625</span></div>
+                        <div class="menu-item-row"><span>Talisker 10yr</span> <span class="text-gold">₹665</span></div>
+                        <div class="menu-item-row"><span>Monkey Shoulder</span> <span class="text-gold">₹515</span></div>
+                        <div class="menu-item-row"><span>Chivas Regal 18yr</span> <span class="text-gold">₹695</span></div>
+                        <div class="menu-item-row"><span>Chivas Regal 12yr</span> <span class="text-gold">₹445</span></div>
+                        <div class="menu-item-row"><span>Johnnie Walker Black</span> <span class="text-gold">₹445</span></div>
+                        <div class="menu-item-row"><span>Johnnie Walker Red</span> <span class="text-gold">₹325</span></div>
+                        <div class="menu-item-row"><span>Jameson</span> <span class="text-gold">₹345</span></div>
+                        <div class="menu-item-row"><span>Jack Daniel's No 7</span> <span class="text-gold">₹465</span></div>
+                        <div class="menu-item-row"><span>Teacher's Highland Cream</span> <span class="text-gold">₹245</span></div>
+                        <div class="menu-item-row"><span>Dewar's White Label</span> <span class="text-gold">₹245</span></div>
+                        <div class="menu-item-row"><span>Jim Beam</span> <span class="text-gold">₹345</span></div>
+                        <div class="menu-item-row"><span>Maker's Mark</span> <span class="text-gold">₹495</span></div>
+                    </div>
+                </details>
+
+                <!-- 5. GIN, VODKA, RUM, TEQUILA -->
+                <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                        <span>Spirits (Gin, Vodka, Rum, Tequila)</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-2">Gin & Vodka</div>
+                        <div class="menu-item-row"><span>Hendrick's</span> <span class="text-gold">₹445</span></div>
+                        <div class="menu-item-row"><span>Beefeater</span> <span class="text-gold">₹325</span></div>
+                        <div class="menu-item-row"><span>Tanqueray</span> <span class="text-gold">₹325</span></div>
+                        <div class="menu-item-row"><span>Bombay Sapphire</span> <span class="text-gold">₹395</span></div>
+                        <div class="menu-item-row"><span>Absolut / Flavors</span> <span class="text-gold">₹345 / ₹355</span></div>
+                        <div class="menu-item-row"><span>Grey Goose / Ciroc / Belvedere</span> <span class="text-gold">₹465</span></div>
+                        <div class="menu-item-row"><span>Stoli / Ketel One</span> <span class="text-gold">₹345</span></div>
+                        
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-6">Rum & Tequila</div>
+                        <div class="menu-item-row"><span>Mount Gay Eclipse Silver</span> <span class="text-gold">₹395</span></div>
+                        <div class="menu-item-row"><span>Bacardi White / Old Monk</span> <span class="text-gold">₹245</span></div>
+                        <div class="menu-item-row"><span>Corralejo Reposado</span> <span class="text-gold">₹595</span></div>
+                        <div class="menu-item-row"><span>Sauza Silver</span> <span class="text-gold">₹375</span></div>
+                        <div class="menu-item-row"><span>Sauza Gold</span> <span class="text-gold">₹395</span></div>
+                        <div class="menu-item-row"><span>Patron XO Café</span> <span class="text-gold">₹455</span></div>
+                    </div>
+                </details>
+
+                <!-- 6. BRANDY, COGNAC, LIQUEURS & CHASERS -->
+                <details class="bg-grey rounded-lg mb-4 overflow-hidden group">
+                    <summary class="flex justify-between items-center p-4 bg-gray-900 hover:bg-gray-800 font-bold text-lg">
+                        <span>Brandy, Liqueurs & Chasers</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                    </summary>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div class="menu-item-row"><span>St Rémy VSOP Brandy</span> <span class="text-gold">₹375</span></div>
+                        <div class="menu-item-row"><span>Rémy VSOP Cognac</span> <span class="text-gold">₹625</span></div>
+                        <div class="menu-item-row"><span>Drambuie / Sambuca / Aperol</span> <span class="text-gold">₹395</span></div>
+                        <div class="menu-item-row"><span>Jägermeister</span> <span class="text-gold">₹465</span></div>
+                        <div class="menu-item-row"><span>Kahlua / Amaretto</span> <span class="text-gold">₹325</span></div>
+                        <div class="menu-item-row"><span>Limoncello Di Capri</span> <span class="text-gold">₹375</span></div>
+                        <div class="menu-item-row"><span>Baileys Irish Cream / Campari / Cointreau</span> <span class="text-gold">₹395</span></div>
+                        
+                        <div class="font-bold text-gold text-sm uppercase tracking-wide mb-2 mt-6">Chasers</div>
+                        <div class="menu-item-row"><span>Club Soda</span> <span class="text-gold">₹0</span></div>
+                        <div class="menu-item-row"><span>Coke, Diet Coke, Zero, Sprite, Juices</span> <span class="text-gold">₹75</span></div>
+                        <div class="menu-item-row"><span>Schweppes Ginger Ale / Tonic Water</span> <span class="text-gold">₹95</span></div>
+                        <div class="menu-item-row"><span>Red Bull</span> <span class="text-gold">₹150</span></div>
+                    </div>
+                </details>
+            </div>
+
+             <!-- Close Button Bottom -->
+            <div class="text-center mt-12">
+                 <button onclick="closeFullMenu()" class="border border-white text-white px-8 py-3 rounded hover:bg-white hover:text-black transition uppercase tracking-widest text-sm font-bold">Close Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: SCROLLABLE GALLERY SECTION -->
+    <section id="gallery" class="py-16 bg-darker overflow-hidden">
+        <div class="container mx-auto px-6 mb-8 flex justify-between items-end">
+            <div>
+                <span class="text-gold uppercase tracking-widest text-xs font-bold">Visual Feast</span>
+                <h2 class="text-3xl md:text-5xl font-serif mt-2">Signature Plates</h2>
+            </div>
+            
+            <!-- Scroll Controls -->
+            <div class="flex gap-4">
+                <button onclick="scrollGallery('left')" class="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-gold hover:text-gold transition">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button onclick="scrollGallery('right')" class="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-gold hover:text-gold transition">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll Container -->
+        <div id="gallery-container" class="gallery-container flex gap-6 overflow-x-auto px-6 pb-8 snap-x snap-mandatory scroll-smooth">
+            
+            <!-- Item 1: Pasta -->
+            <div class="min-w-[300px] md:min-w-[400px] h-[400px] relative rounded-lg overflow-hidden snap-center group">
+                <img src="https://cdn.jsdelivr.net/gh/XtremeBros911/Host_Image@main/WhiteSausePasta.png" onerror="this.src='https://placehold.co/400x400/121212/D4AF37?text=Pasta'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="White Sauce Pasta">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <p class="text-gold font-bold text-sm uppercase tracking-wider mb-1">Italian Classic</p>
+                    <p class="text-gray-300 text-sm mt-2">Creamy white sauce pasta with parmesan and herbs.</p>
+                </div>
+            </div>
+
+            <!-- Item 2: Pizza -->
+            <div class="min-w-[300px] md:min-w-[400px] h-[400px] relative rounded-lg overflow-hidden snap-center group">
+                <img src="https://cdn.jsdelivr.net/gh/XtremeBros911/Host_Image@main/Pizza.png" onerror="this.src='https://placehold.co/400x400/121212/D4AF37?text=Pizza'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Thin Crust Pizza">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <p class="text-gold font-bold text-sm uppercase tracking-wider mb-1">Signature Thin Crust</p>
+                    <p class="text-gray-300 text-sm mt-2">Wood-fired pizza with fresh, gourmet toppings.</p>
+                </div>
+            </div>
+
+            <!-- Item 3: Falafel -->
+            <div class="min-w-[300px] md:min-w-[400px] h-[400px] relative rounded-lg overflow-hidden snap-center group">
+                <img src="https://cdn.jsdelivr.net/gh/XtremeBros911/Host_Image@main/Falafal.png" onerror="this.src='https://placehold.co/400x400/121212/D4AF37?text=Falafel'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Falafel Platter">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <p class="text-gold font-bold text-sm uppercase tracking-wider mb-1">Mediterranean Bites</p>
+                    <p class="text-gray-300 text-sm mt-2">Crispy falafel served with hummus and pita.</p>
+                </div>
+            </div>
+
+            <!-- Item 4: Non-Veg Platter -->
+            <div class="min-w-[300px] md:min-w-[400px] h-[400px] relative rounded-lg overflow-hidden snap-center group">
+                <img src="https://cdn.jsdelivr.net/gh/XtremeBros911/Host_Image@main/NonVeg.png" onerror="this.src='https://placehold.co/400x400/121212/D4AF37?text=Tandoori'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Tandoori Platter">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <p class="text-gold font-bold text-sm uppercase tracking-wider mb-1">Tandoori Delights</p>
+                    <p class="text-gray-300 text-sm mt-2">Succulent tandoori platter with mint chutney.</p>
+                </div>
+            </div>
+
+             <!-- Item 5: Dumplings -->
+             <div class="min-w-[300px] md:min-w-[400px] h-[400px] relative rounded-lg overflow-hidden snap-center group">
+                <img src="https://cdn.jsdelivr.net/gh/XtremeBros911/Host_Image@main/Dumpling.png" onerror="this.src='https://placehold.co/400x400/121212/D4AF37?text=Dumplings'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Steamed Dumplings">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <p class="text-gold font-bold text-sm uppercase tracking-wider mb-1">Asian Flavors</p>
+                    <p class="text-gray-300 text-sm mt-2">Steamed dumplings served with chili oil.</p>
+                </div>
+            </div>
+
+             <!-- Item 6: Spaghetti -->
+             <div class="min-w-[300px] md:min-w-[400px] h-[400px] relative rounded-lg overflow-hidden snap-center group">
+                <img src="https://cdn.jsdelivr.net/gh/XtremeBros911/Host_Image@main/Spagetti.png" onerror="this.src='https://placehold.co/400x400/121212/D4AF37?text=Spaghetti'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Spaghetti">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <p class="text-gold font-bold text-sm uppercase tracking-wider mb-1">Italian Classic</p>
+                    <p class="text-gray-300 text-sm mt-2">Classic spaghetti in a rich tomato sauce.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-black pt-20 pb-10 border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 text-center md:text-left">
+                
+                <!-- Brand -->
+                <div>
+                    <a href="#" class="text-2xl font-serif font-bold tracking-wider text-gold mb-6 block">ROADHOUSE<span class="text-white">CAFE</span></a>
+                    <p class="text-gray-500 mb-6">Casual eclectic dining in the heart of New Delhi. Join us for a meal, stay for the vibe.</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-tripadvisor text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white uppercase tracking-widest font-bold mb-6 text-sm">Visit Us</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt text-gold mr-2"></i> M 22, 2nd Floor, M Block Market</p>
+                    <p class="text-gray-400 mb-2 ml-6">Greater Kailash 1 (GK 1), New Delhi</p>
+                    <p class="text-gray-400 mt-4"><i class="fas fa-phone text-gold mr-2"></i> +91 80689 74706</p>
+                </div>
+
+                <!-- Hours -->
+                <div>
+                    <h4 class="text-white uppercase tracking-widest font-bold mb-6 text-sm">Opening Hours</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li class="flex justify-between md:justify-start gap-4">
+                            <span class="w-20">Mon-Sun:</span>
+                            <span class="text-white">12:30 PM - 11:30 PM</span>
+                        </li>
+                        <li class="mt-4 text-sm text-gray-600">
+                            *Happy Hours: 4 PM - 7 PM (Mon-Thu)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-900 mt-16 pt-8 text-center">
+                <p class="text-gray-600 text-sm">&copy; 2025 Roadhouse Cafe GK1. Designed with <i class="fas fa-heart text-red-900"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Tab Functionality
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            
+            // Remove active state from all buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+                tablinks[i].classList.remove("text-white");
+                tablinks[i].classList.add("text-gray-400");
+            }
+            
+            // Show current tab and add active state to button
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+            evt.currentTarget.classList.add("text-white");
+            evt.currentTarget.classList.remove("text-gray-400");
+        }
+
+        // FULL MENU MODAL LOGIC
+        function openMenuModal(type) {
+            document.getElementById('menu-modal').classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            switchModalTab(type);
+        }
+
+        function closeFullMenu() {
+            document.getElementById('menu-modal').classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        function switchModalTab(type) {
+            const foodContent = document.getElementById('modal-content-food');
+            const barContent = document.getElementById('modal-content-bar');
+            const btnFood = document.getElementById('modal-tab-food');
+            const btnBar = document.getElementById('modal-tab-bar');
+
+            if (type === 'food') {
+                foodContent.classList.remove('hidden');
+                barContent.classList.add('hidden');
+                btnFood.classList.add('active');
+                btnBar.classList.remove('active');
+            } else {
+                foodContent.classList.add('hidden');
+                barContent.classList.remove('hidden');
+                btnFood.classList.remove('active');
+                btnBar.classList.add('active');
+            }
+        }
+
+        // Gallery Scroll Logic
+        function scrollGallery(direction) {
+            const container = document.getElementById('gallery-container');
+            const scrollAmount = 400; // Approx width of one card
+            
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        // Open default tab on load
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("defaultOpen").click();
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            menu.classList.toggle('open');
+            if (menu.classList.contains('open')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+
+        links.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.replace('py-4', 'py-2');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.replace('py-2', 'py-4');
+            }
+        });
+    </script>
+</body>
+</html>

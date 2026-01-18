@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-gold: #D4AF37;
+  --color-dark: #121212;
+  --color-darker: #0a0a0a; 
+  --color-grey: #2C2C2C;
+  --color-light: #F4F4F4;
+  --color-vegan: #4CAF50;
+  --color-gf: #E4A11B;
+
+  /* Fonts */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+
+  /* Animations */
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Base Styles preserved from your HTML <style> block */
+@layer base {
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    overflow-x: hidden;
+    opacity: 0; 
+    animation: bodyFadeIn 0.5s ease-in-out forwards;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@keyframes bodyFadeIn {
+  to { opacity: 1; }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .hero-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://cdn.jsdelivr.net/gh/XtremeBros911/Host_Image@main/Ambiance.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .gallery-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold) var(--color-grey);
+  }
+  
+  .gallery-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .gallery-container::-webkit-scrollbar-track {
+    background: var(--color-grey);
+    border-radius: 4px;
+  }
+  
+  .gallery-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-gold);
+    border-radius: 4px;
+  }
+  
+  .gallery-container::-webkit-scrollbar-thumb:hover {
+    background-color: #bfa34b; 
+  }
+}
+
+/* Component Classes */
+@layer components {
+  .btn-gold {
+    background-color: var(--color-gold);
+    color: #000;
+    transition: all 0.3s ease;
+  }
+  .btn-gold:hover {
+    background-color: #bfa34b;
+    transform: translateY(-2px);
+  }
+
+  .tab-btn {
+    color: #6b7280;
+    border-bottom: 2px solid transparent;
+  }
+  .tab-btn.active {
+    background-color: var(--color-grey);
+    color: var(--color-gold);
+    border-bottom: 2px solid var(--color-gold);
+  }
+
+  .modal-tab-btn {
+    padding: 10px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #333;
+    transition: all 0.3s;
+  }
+  .modal-tab-btn.active {
+    background-color: var(--color-gold);
+    color: black;
+    border-color: var(--color-gold);
+  }
+  .modal-tab-btn:not(.active):hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+  }
+
+  /* Accordion Styles */
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] > summary {
+    background-color: var(--color-gold);
+    color: #000;
+  }
+  details[open] > summary .accordion-icon {
+    transform: rotate(180deg);
+  }
+  
+  .menu-item-row {
+    border-bottom: 1px solid #333;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .menu-item-row:last-child {
+    border-bottom: none;
+  }
+  
+  /* Mobile Menu */
+  #mobile-menu {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+  #mobile-menu.open {
+    transform: translateX(0);
+  }
+  
+  /* Menu Modal */
+  #menu-modal {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+  }
+  #menu-modal.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
